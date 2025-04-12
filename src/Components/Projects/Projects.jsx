@@ -8,7 +8,7 @@ const Services = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // Extract technologies used from the description
+    //Extract technologies used from the description
     const extractTechnologies = (desc) => {
         const techIndex = desc.indexOf("Technologies used:");
         if (techIndex !== -1) {
@@ -19,10 +19,10 @@ const Services = () => {
 
     const handleProjectClick = (service) => {
         if (service.s_name === "Cool Cal by Govini") {
-            // Redirect to the hosted site for Cool Cal
+            //Redirect to the hosted site for Cool Cal
             window.open("https://govini2003.github.io/Calculator/coolcal.html", "_blank");
         } else {
-            // Show modal with full description for other projects
+            //Show modal with full description for other projects
             setSelectedProject(service);
             setShowModal(true);
         }
