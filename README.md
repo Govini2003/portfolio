@@ -1,5 +1,4 @@
 # Portfolio Website
-
 Welcome to my portfolio website repository! This project showcases my skills, projects, and contact information. It is built using React and Vite, ensuring a fast and modern development experience. Please find my resume through the Portfolio
 
 ## Features
