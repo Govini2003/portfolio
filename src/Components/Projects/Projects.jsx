@@ -8,6 +8,10 @@ const Services = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
+<<<<<<< HEAD
+=======
+    //Extract technologies used from the description
+>>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
     const extractTechnologies = (desc) => {
         const techIndex = desc.indexOf("Technologies used:");
         if (techIndex !== -1) {
@@ -18,10 +22,18 @@ const Services = () => {
 
     const handleProjectClick = (service) => {
         if (service.s_name === "Cool Cal by Govini") {
+<<<<<<< HEAD
+=======
+            //Redirect to the hosted site for Cool Cal
+>>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
             window.open("https://govini2003.github.io/Calculator/coolcal.html", "_blank");
         } else if (service.s_name === "CV By Maya") {
             window.open("https://govini2003.github.io/cv-builder/", "_blank");
         } else {
+<<<<<<< HEAD
+=======
+            //Show modal with full description for other projects
+>>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
             setSelectedProject(service);
             setShowModal(true);
         }
