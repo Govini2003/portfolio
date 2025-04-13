@@ -8,7 +8,6 @@ const Services = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
-    // Extract technologies used from the description
     const extractTechnologies = (desc) => {
         const techIndex = desc.indexOf("Technologies used:");
         if (techIndex !== -1) {
@@ -19,10 +18,10 @@ const Services = () => {
 
     const handleProjectClick = (service) => {
         if (service.s_name === "Cool Cal by Govini") {
-            // Redirect to the hosted site for Cool Cal
             window.open("https://govini2003.github.io/Calculator/coolcal.html", "_blank");
+        } else if (service.s_name === "CV By Maya") {
+            window.open("https://govini2003.github.io/cv-builder/", "_blank");
         } else {
-            // Show modal with full description for other projects
             setSelectedProject(service);
             setShowModal(true);
         }
@@ -49,7 +48,7 @@ const Services = () => {
                         >
                             <h3>{service.s_no}</h3>
                             <h2>{service.s_name}</h2>
-                            <p>{extractTechnologies(service.s_desc)}</p> {/* Show only technologies */}
+                            <p>{extractTechnologies(service.s_desc)}</p>
                             <div className='services-readmore'>
                                 <p>Read More</p>
                                 <img src={arrow_icon} alt="" />
@@ -59,13 +58,46 @@ const Services = () => {
                 })}
             </div>
 
-            {/* Modal for showing full description */}
             {showModal && selectedProject && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                         <h2>{selectedProject.s_name}</h2>
-                        <p>{selectedProject.s_desc}</p> {/* Show full description */}
-                        <button onClick={closeModal}>Close</button>
+                        <p>{selectedProject.s_desc}</p>
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'flex-end',
+                                gap: '10px',
+                                marginTop: '20px'
+                            }}
+                        >
+                            {selectedProject.s_name === "Vetaa.lk" && (
+                                <button
+                                    style={{
+                                        backgroundColor: '#ff00ff',
+                                        color: '#fff',
+                                        padding: '8px 16px',
+                                        borderRadius: '5px',
+                                        cursor: 'pointer',
+                                        border: 'none'
+                                    }}
+                                    onClick={() => window.open("https://vetaa.lk", "_blank")}
+                                >
+                                    Marketing Site
+                                </button>
+                            )}
+                            <button
+                                onClick={closeModal}
+                                style={{
+                                    padding: '8px 16px',
+                                    borderRadius: '5px',
+                                    cursor: 'pointer',
+                                    border: 'none'
+                                }}
+                            >
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}
