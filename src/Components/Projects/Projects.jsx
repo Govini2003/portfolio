@@ -8,10 +8,7 @@ const Services = () => {
     const [showModal, setShowModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
-<<<<<<< HEAD
-=======
-    //Extract technologies used from the description
->>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
+    // Extract technologies used from the description
     const extractTechnologies = (desc) => {
         const techIndex = desc.indexOf("Technologies used:");
         if (techIndex !== -1) {
@@ -22,18 +19,12 @@ const Services = () => {
 
     const handleProjectClick = (service) => {
         if (service.s_name === "Cool Cal by Govini") {
-<<<<<<< HEAD
-=======
-            //Redirect to the hosted site for Cool Cal
->>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
+            // Redirect to the hosted site for Cool Cal
             window.open("https://govini2003.github.io/Calculator/coolcal.html", "_blank");
         } else if (service.s_name === "CV By Maya") {
             window.open("https://govini2003.github.io/cv-builder/", "_blank");
         } else {
-<<<<<<< HEAD
-=======
-            //Show modal with full description for other projects
->>>>>>> f961575159d975e9f45ff0732dc2c6c6a1c89940
+            // Show modal with full description for other projects
             setSelectedProject(service);
             setShowModal(true);
         }
@@ -50,24 +41,23 @@ const Services = () => {
                 <h1>My Projects</h1>
                 <img src={theme_pattern} alt="" />
             </div>
+
             <div className="services-container">
-                {Services_Data.map((service, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className='services-format'
-                            onClick={() => handleProjectClick(service)}
-                        >
-                            <h3>{service.s_no}</h3>
-                            <h2>{service.s_name}</h2>
-                            <p>{extractTechnologies(service.s_desc)}</p>
-                            <div className='services-readmore'>
-                                <p>Read More</p>
-                                <img src={arrow_icon} alt="" />
-                            </div>
+                {Services_Data.map((service, index) => (
+                    <div
+                        key={index}
+                        className='services-format'
+                        onClick={() => handleProjectClick(service)}
+                    >
+                        <h3>{service.s_no}</h3>
+                        <h2>{service.s_name}</h2>
+                        <p>{extractTechnologies(service.s_desc)}</p>
+                        <div className='services-readmore'>
+                            <p>Read More</p>
+                            <img src={arrow_icon} alt="" />
                         </div>
-                    );
-                })}
+                    </div>
+                ))}
             </div>
 
             {showModal && selectedProject && (
