@@ -28,7 +28,7 @@ const Hero = () => {
                 </AnchorLink>
             </div>
             <div className="hero-resume" onClick={handleResumeClick}>
-                My CV
+                My resume
             </div>
         </div>
     </div>
