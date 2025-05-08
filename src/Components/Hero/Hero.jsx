@@ -21,6 +21,10 @@ const Hero = () => {
         <img src={profile_img} alt="profile"/>
         <h1><span>I'm Govini Rajapakse,</span> from Sri Lanka</h1>
         <p>I am a Software Engineering undergraduate at the University of Westminster</p>
+        <p>I am from Galle</p>
+        <p>I studied at Sanghamitta College, Galle</p>
+
+
         <div className="hero-action">
             <div className='hero-connect'>
                 <AnchorLink className='anchor-link' offset={50} href='#contact'>
