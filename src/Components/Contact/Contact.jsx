@@ -60,6 +60,7 @@ const Contact = () => {
         }
     };
 
+    
     return (
         <div id="contact" className="contact">
             <div className="contact-title">
@@ -103,5 +104,6 @@ const Contact = () => {
         </div>
     );
 };
+
 
 export default Contact;

@@ -26,8 +26,14 @@ const Services_Data = [
     },
     {
         s_no: "06",
-        s_name: "Veta.lk",
+        s_name: "Vetaa.lk",
         s_desc: "Currently contributing to Veta.lk, a group project using Flutter for the frontend, Node.js for the backend, and MongoDB for database management. Technologies used: Flutter, Node.js, MongoDB."
+    },
+
+    {
+        s_no: "07",
+        s_name: "CV By Maya",
+        s_desc: "CV Generating app that is ATS friendly. Implemented PDF export functionality to streamline the job application process. Technologies used: React, TypeScript, Tailwind CSS."
     }
 ];
 
