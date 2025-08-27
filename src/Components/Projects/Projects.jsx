@@ -83,7 +83,7 @@ const Services = () => {
                                         cursor: 'pointer',
                                         border: 'none'
                                     }}
-                                    onClick={() => window.open("https://vetaa.lk", "_blank")}
+                                    onClick={() => window.open("https://veta-app-marketing-site-5qoazsx3p-govini2003s-projects.vercel.app/", "_blank")}
                                 >
                                     Marketing Site
                                 </button>
