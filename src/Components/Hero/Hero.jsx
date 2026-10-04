@@ -1,40 +1,45 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import './Hero.css'
-import profile_img from '../../assets/profile_img.jpg'
-// Import your resume file
-import resume from '../../assets/cv_Govini Rajapakse.pdf'
+import './Hero.css';
+import profileImg from '../../assets/profile_img.jpg';
+import resume from '../../assets/cv_Govini Rajapakse.pdf';
 
-const Hero = () => {
-  const handleResumeClick = () => {
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = resume;
-    link.download = 'cv_Govini Rajapakse.pdf'
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  return (
-    <div id='home' className='hero'>
-        <img src={profile_img} alt="profile"/>
-        <h1><span>I'm Govini Rajapakse,</span> from Sri Lanka</h1>
-        <p>I am a Software Engineering undergraduate at the University of Westminster. I am from Galle. I studied at Sanghamitta College, Galle</p>
-
-
-        <div className="hero-action">
-            <div className='hero-connect'>
-                <AnchorLink className='anchor-link' offset={50} href='#contact'>
-                    Connect With Me
-                </AnchorLink>
+const Hero = () => (
+    <section id="home" className="hero section-shell">
+        <div className="hero-copy">
+            <p className="eyebrow"><span className="availability-dot" /> Software engineer in the making</p>
+            <h1>
+                Building thoughtful
+                <span> digital experiences.</span>
+            </h1>
+            <p className="hero-intro">
+                I&apos;m Govini Rajapakse, a final-year student at IIT and a software engineer
+                who enjoys turning ideas into useful, well-crafted products.
+            </p>
+            <div className="hero-meta">
+                <span>Based in Galle, Sri Lanka</span>
+                <span className="meta-divider" />
+                <span>Open to opportunities</span>
             </div>
-            <div className="hero-resume" onClick={handleResumeClick}>
-                My resume
+            <div className="hero-action">
+                <a className="button button-primary" href="#contact">
+                    Get in touch <span aria-hidden="true">↗</span>
+                </a>
+                <a className="button button-secondary" href={resume} download="Govini-Rajapakse-CV.pdf">
+                    Download CV <span aria-hidden="true">↓</span>
+                </a>
             </div>
         </div>
-    </div>
-  )
-}
+        <div className="hero-visual">
+            <div className="hero-image-frame">
+                <img src={profileImg} alt="Govini Rajapakse" />
+            </div>
+            <div className="hero-caption">
+                <span className="caption-index">01 / 04</span>
+                <span>Curious by nature. Thoughtful by design.</span>
+            </div>
+            <span className="hero-orbit hero-orbit-one" aria-hidden="true" />
+            <span className="hero-orbit hero-orbit-two" aria-hidden="true" />
+        </div>
+    </section>
+);
 
-export default Hero
+export default Hero;

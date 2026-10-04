@@ -1,52 +1,59 @@
-import React from 'react'
-import './About.css'
-import theme_pattern from '../../assets/theme_pattern.svg'
-import profile_img from '../../assets/profile_img.jpg'
-const About = () => {
-  return (
-    <div id='about' className='about'>
+import './About.css';
 
-        <div className="about-title">
-            <h1>About Me</h1>
-            <img src={theme_pattern} alt=""/>
-        </div>
-        <div className="about-sections">
-            <div className="about-left">
-            <img src={profile_img} alt=""/>
-        </div>
-        <div className="about-right">
-        <div className="about-para">
-        <p>I have worked on several projects using below languages. Through these projects, I have gained hands-on experience in web and mobile development, databases, backend services, and frontend frameworks.</p>
-        </div>
+const skills = [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Node.js',
+    'Java',
+    'Spring Boot',
+    'Python',
+    'Flutter',
+    'MongoDB',
+    'SQL',
+];
 
-        <div className="about-skills">
-        <div className="about-skill"><p>JavaScript</p><hr style ={{width:"50%"}}/></div>
-        <div className="about-skill"><p>Java</p><hr style ={{width:"65%"}}/></div>
-        <div className="about-skill"><p>Python</p><hr style ={{width:"70%"}}/></div>
-        <div className="about-skill"><p>HTML & CSS</p><hr style ={{width:"90%"}}/></div>
-        <div className="about-skill"><p>PHP</p><hr style ={{width:"70%"}}/></div>
-        <div className="about-skill"><p>React JS</p><hr style ={{width:"50%"}}/></div>
-        <div className="about-skill"><p>Flutter</p><hr style ={{width:"40%"}}/></div>
-        <div className="about-skill"><p>Node JS</p><hr style ={{width:"30%"}}/></div>
+const About = () => (
+    <section id="about" className="about section-shell">
+        <div className="section-heading">
+            <p className="section-kicker">A little about me</p>
+            <h2>Curious mind. <span>Practical builder.</span></h2>
+        </div>
+        <div className="about-layout">
+            <div className="about-story">
+                <p className="about-lead">
+                    I&apos;m a final-year student at IIT with a growing passion for software
+                    engineering and building products that make everyday tasks simpler.
+                </p>
+                <p className="about-description">
+                    I enjoy working across the stack, learning new tools, and collaborating
+                    with people who care about making thoughtful, reliable software.
+                </p>
+                <div className="experience-card">
+                    <span className="experience-mark" aria-hidden="true">✳</span>
+                    <div>
+                        <p className="experience-label">Experience</p>
+                        <h3>Software Engineer Intern</h3>
+                        <p className="experience-detail">Alphageekx <span>·</span> Internship</p>
+                    </div>
+                    <span className="experience-arrow" aria-hidden="true">↗</span>
+                </div>
+            </div>
+            <div className="about-toolkit">
+                <div className="toolkit-heading">
+                    <h3>Tools I work with</h3>
+                    <span>Always learning</span>
+                </div>
+                <div className="skill-list">
+                    {skills.map((skill) => <span className="skill-chip" key={skill}>{skill}</span>)}
+                </div>
+                <div className="about-note">
+                    <span className="note-line" />
+                    <p>From a first sketch to a polished release, I like being part of the whole process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+);
 
-        </div>
-        </div>
-        </div>
-        
-        <div className="about-achievements">
-        <div className="about-achievement">
-            <h1>5+</h1>
-            <p>HACKATHONS PARTICIPATED</p>
-        </div>
-        <hr/>
-        <div className="about-achievement">
-            <h1>10+</h1>
-            <p>PROJECTS COMPLETED</p>
-        </div>
-        </div>
-
-    </div>
-  )
-}
-
-export default About
+export default About;

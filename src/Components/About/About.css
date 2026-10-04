@@ -1,190 +1,187 @@
-.about-left img {
-    width: 290px;
-    height: 280px;
-  }
-  
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+  padding-top: 55px;
+  padding-bottom: 108px;
+  border-top: 1px solid var(--line);
 }
 
-.about-title {
-    position: relative;
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 43px;
 }
 
-.about-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
+.section-kicker {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.about-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+.section-heading h2 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.14;
 }
 
-.about-sections {
-    display: flex;
-    gap: 80px;
+.section-heading h2 span {
+  color: var(--muted);
 }
 
-.about-right {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 100px;
 }
 
-.about-para {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 24px;
-    font-weight: 500;
+.about-story {
+  max-width: 530px;
 }
 
-.about-skills {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.about-lead {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
 }
 
-.about-skill {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    transition: 0.3s;
+.about-description {
+  margin: 15px 0 27px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
 }
 
-.about-skill p {
-    min-width: 150px;
-    font-size: 24px;
-    font-weight: 500;
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 19px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
 }
 
-.about-skill hr {
-    outline: none;
-    border: none;
-    width: 50%;
-    height: 8px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF);
+.experience-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 20px;
 }
 
-.about-achievements {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 80px;
+.experience-label {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.about-achievement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: 0.5s;
+.experience-card h3 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
-.about-achievement h1 {
-    font-size: 60px;
-    font-weight: 700;
-    background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.25%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.experience-detail {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
 }
 
-.about-achievement p {
-    font-size: 22px;
-    font-weight: 500;
+.experience-detail span {
+  padding: 0 3px;
 }
 
-.about-skill:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+.experience-arrow {
+  align-self: flex-start;
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 15px;
 }
 
-.about-achievement:hover {
-    transform: scale(1.12);
-    transition: 0.5s;
+.about-toolkit {
+  padding-top: 2px;
 }
 
-@media (max-width: 768px) {
-    .about {
-        gap: 50px;
-        margin: 30px 40px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .about-title h1 {
-        font-size: 40px;
-        padding: 0;
-    }
-
-    .about-title img {
-        width: 100px;
-        right: -10px;
-    }
-
-    .about-sections {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .about-left img {
-        width: 200px;
-        height: auto;
-    }
-    
-    .about-para {
-        font-size: 18px;
-        line-height: 28px;
-        text-align: center;
-    }
-
-    .about-skills {
-        width: 100%;
-        align-items: center;
-    }
-
-    .about-skill {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .about-skill p {
-        font-size: 18px;
-    }
-
-    .about-skill hr {
-        width: 80%;
-        height: 4px;
-    }
-
-    .about-achievements {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 50px;
-    }
-
-    .about-achievement h1 {
-        font-size: 30px;
-    }
-
-    .about-achievement p {
-        text-align: center;
-        font-size: 16px;
-    }
+.toolkit-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
 }
 
+.toolkit-heading h3 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+}
 
+.toolkit-heading span {
+  color: var(--muted);
+  font-size: 11px;
+}
 
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.skill-chip {
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: #46534d;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.about-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.note-line {
+  width: 2px;
+  height: 35px;
+  flex: 0 0 2px;
+  background: #8db19c;
+}
+
+.about-note p {
+  max-width: 320px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+@media (max-width: 760px) {
+  .about {
+    padding-top: 46px;
+    padding-bottom: 75px;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+}
