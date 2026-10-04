@@ -13,7 +13,6 @@ const Navbar = () => {
     return (
         <header className="navbar">
             <a className="nav-brand" href="#home" aria-label="Govini Rajapakse home">
-                <span className="brand-mark">G</span>
                 <span>Govini Rajapakse</span>
             </a>
             <button
