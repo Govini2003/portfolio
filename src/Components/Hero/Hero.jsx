@@ -4,6 +4,11 @@ import resume from '../../assets/cv_Govini Rajapakse.pdf';
 
 const Hero = () => (
     <section id="home" className="hero section-shell">
+        <div className="hero-visual">
+            <div className="hero-image-frame">
+                <img src={profileImg} alt="Govini Rajapakse — software engineering undergraduate and full-stack developer" />
+            </div>
+        </div>
         <div className="hero-copy">
             <p className="eyebrow"><span className="availability-dot" /> Software engineer in the making</p>
             <h1>
@@ -26,11 +31,6 @@ const Hero = () => (
                 <a className="button button-secondary" href={resume} download="Govini-Rajapakse-CV.pdf">
                     Download CV <span aria-hidden="true">↓</span>
                 </a>
-            </div>
-        </div>
-        <div className="hero-visual">
-            <div className="hero-image-frame">
-                <img src={profileImg} alt="Govini Rajapakse — software engineering undergraduate and full-stack developer" />
             </div>
         </div>
     </section>
