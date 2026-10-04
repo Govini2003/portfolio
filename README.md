@@ -1,3 +1,5 @@
+<img width="1896" height="976" alt="image" src="https://github.com/user-attachments/assets/bcb66eeb-ce53-4d33-8283-207fb0bc7d09" />
+
 # Portfolio Website
 Welcome to my portfolio website repository! This project showcases my skills, projects, and contact information. It is built using React and Vite, ensuring a fast and modern development experience. Please find my resume through the Portfolio
 
