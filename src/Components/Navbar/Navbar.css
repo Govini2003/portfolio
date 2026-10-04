@@ -8,8 +8,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 max(6vw, calc((100vw - var(--content-width)) / 2));
-  border-bottom: 1px solid rgb(226 232 227 / 75%);
-  background: rgb(248 249 246 / 92%);
+  border-bottom: 1px solid rgb(42 39 80 / 75%);
+  background: rgb(11 10 26 / 92%);
   backdrop-filter: blur(16px);
 }
 
@@ -21,6 +21,7 @@
   font-size: 15px;
   font-weight: 800;
   letter-spacing: -0.04em;
+  color: var(--ink);
 }
 
 .brand-mark {
@@ -29,8 +30,8 @@
   height: 34px;
   place-items: center;
   border-radius: 11px;
-  background: var(--ink);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--paper);
   font-size: 17px;
   letter-spacing: -0.06em;
 }
@@ -49,7 +50,7 @@
 }
 
 .nav-menu > a:not(.nav-contact-link):hover {
-  color: var(--ink);
+  color: var(--accent-secondary);
 }
 
 .nav-contact-link {
@@ -59,14 +60,14 @@
   padding: 12px 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface);
   color: var(--ink);
   transition: border-color 180ms ease, transform 180ms ease;
 }
 
 .nav-contact-link:hover {
   transform: translateY(-1px);
-  border-color: #adc9b9;
+  border-color: var(--accent-blue);
 }
 
 .nav-contact-link span {
@@ -94,14 +95,14 @@
     gap: 5px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--white);
+    background: var(--surface);
     cursor: pointer;
   }
 
   .nav-menu-toggle span {
     width: 16px;
     height: 1.5px;
-    background: var(--ink);
+    background: var(--accent);
     transition: transform 180ms ease;
   }
 

@@ -17,7 +17,9 @@
 }
 
 .contact-copy h2 span {
-  color: var(--accent);
+  background: var(--accent-gradient);
+  background-clip: text;
+  color: transparent;
 }
 
 .contact-intro {
@@ -33,7 +35,7 @@
   align-items: center;
   gap: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #b9c9be;
+  border-bottom: 1px solid var(--accent-blue);
   color: var(--accent);
   font-size: 13px;
   font-weight: 700;
@@ -56,7 +58,7 @@
   padding: 23px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #fff;
+  background: var(--surface);
 }
 
 .form-field {
@@ -66,7 +68,7 @@
 }
 
 .form-field label {
-  color: #4a5750;
+  color: var(--ink);
   font-size: 11px;
   font-weight: 700;
 }
@@ -76,7 +78,7 @@
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fbfcfa;
+  background: var(--paper);
   color: var(--ink);
   font-size: 12px;
   outline: none;
@@ -97,13 +99,13 @@
 
 .form-field input:focus,
 .form-field textarea:focus {
-  border-color: #86ad95;
-  background: #fff;
+  border-color: var(--accent-secondary);
+  background: var(--surface-raised);
 }
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: #9aa59e;
+  color: var(--muted);
 }
 
 .contact-submit {

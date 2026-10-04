@@ -2,21 +2,27 @@
 
 :root {
   font-family: 'DM Sans', sans-serif;
-  color: #17221f;
-  background: #f8f9f6;
+  color: #EEF0FF;
+  color-scheme: dark;
+  background: #0B0A1A;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-optical-sizing: auto;
   font-weight: 400;
-  --ink: #17221f;
-  --muted: #64716c;
-  --line: #e2e8e3;
-  --paper: #f8f9f6;
-  --white: #fff;
-  --accent: #286c58;
-  --accent-soft: #e5f0e9;
+  --ink: #EEF0FF;
+  --muted: #9A9CC4;
+  --line: #2A2750;
+  --paper: #0B0A1A;
+  --surface: #14122B;
+  --surface-raised: #1C1A3A;
+  --accent: #A78BFA;
+  --accent-secondary: #5EEAD4;
+  --accent-blue: #7DD3FC;
+  --accent-pink: #F0ABFC;
+  --accent-soft: rgb(167 139 250 / 13%);
+  --accent-gradient: linear-gradient(90deg, #C4B5FD 0%, #A78BFA 40%, #5EEAD4 100%);
   --content-width: 1120px;
 }
 
@@ -33,6 +39,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  background: var(--paper);
 }
 
 body,
@@ -62,12 +69,12 @@ img {
 }
 
 ::selection {
-  color: var(--ink);
-  background: #cfe5d6;
+  color: var(--paper);
+  background: var(--accent-secondary);
 }
 
 :focus-visible {
-  outline: 3px solid #82b69b;
+  outline: 3px solid var(--accent-blue);
   outline-offset: 4px;
 }
 

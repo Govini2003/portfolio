@@ -1,6 +1,6 @@
 .footer {
   border-top: 1px solid var(--line);
-  background: #f1f4f0;
+  background: var(--surface);
 }
 
 .footer-inner {
@@ -19,7 +19,9 @@
 }
 
 .footer-brand span {
-  color: var(--accent);
+  background: var(--accent-gradient);
+  background-clip: text;
+  color: transparent;
 }
 
 .footer-inner > p {
@@ -40,7 +42,7 @@
 }
 
 .footer-bottom a {
-  color: #435149;
+  color: var(--ink);
   font-weight: 600;
 }
 
