@@ -1,40 +1,49 @@
-const Services_Data = [
+const projects = [
     {
-        s_no: "01",
-        s_name: "University Grade Predictor",
-        s_desc: "Developed a Python program to predict student progression based on pass, defer, and fail credits, showcasing Python proficiency in addressing academic challenges. Technologies used: Python, py3 graphic py."
+        number: '01',
+        name: 'University Grade Predictor',
+        description: 'A Python program that predicts student progression from pass, defer, and fail credit totals.',
+        technologies: ['Python', 'Py3 Graphic'],
     },
     {
-        s_no: "02",
-        s_name: "Plane Management",
-        s_desc: "Created a Java-based program to manage and track aircraft seat reservations, enhancing efficiency in the aviation industry. Technologies used: Java."
+        number: '02',
+        name: 'Plane Management',
+        description: 'A Java application for managing aircraft seat reservations and tracking availability.',
+        technologies: ['Java'],
     },
     {
-        s_no: "03",
-        s_name: "AquaMart",
-        s_desc: "Contributed to a website for water distribution and donations to water-scarce countries, supporting global water scarcity solutions. Technologies used: HTML, CSS, JavaScript."
+        number: '03',
+        name: 'AquaMart',
+        description: 'A website supporting water distribution and donations to communities facing water scarcity.',
+        technologies: ['HTML', 'CSS', 'JavaScript'],
     },
     {
-        s_no: "04",
-        s_name: "Cool Cal by Govini",
-        s_desc: "Developed a web app offering a range of math calculations and unit conversions on a single platform, streamlining multiple tasks for users. Technologies used: HTML, CSS, JavaScript."
+        number: '04',
+        name: 'Cool Cal',
+        description: 'A web app bringing everyday mathematical calculations and unit conversions together.',
+        technologies: ['HTML', 'CSS', 'JavaScript'],
+        url: 'https://govini2003.github.io/Calculator/coolcal.html',
     },
     {
-        s_no: "05",
-        s_name: "Ticketing System",
-        s_desc: "Developed a CLI and web-based ticketing system simulation with real-time ticket processing, user input validation, and dynamic feedback. The backend was built using Spring Boot, and the frontend was developed with React. Technologies used: Java, Spring Boot, React, REST APIs, multithreading."
+        number: '05',
+        name: 'Ticketing System',
+        description: 'A ticketing simulation with a React interface, Spring Boot backend, and real-time ticket processing.',
+        technologies: ['Java', 'Spring Boot', 'React', 'REST APIs'],
     },
     {
-        s_no: "06",
-        s_name: "Vetaa.lk",
-        s_desc: "Currently contributing to Veta.lk, a group project using Flutter for the frontend, Node.js for the backend, and MongoDB for database management. Technologies used: Flutter, Node.js, MongoDB."
+        number: '06',
+        name: 'Vetaa.lk',
+        description: 'A veterinary care platform built as a group project, with a Flutter app and Node.js backend.',
+        technologies: ['Flutter', 'Node.js', 'MongoDB'],
+        url: 'https://veta-app-marketing-site.vercel.app/',
     },
-
     {
-        s_no: "07",
-        s_name: "CV By Maya",
-        s_desc: "CV Generating app that is ATS friendly. Implemented PDF export functionality to streamline the job application process. Technologies used: React, TypeScript, Tailwind CSS."
-    }
+        number: '07',
+        name: 'CV By Maya',
+        description: 'An ATS-friendly CV builder with PDF export to simplify the job application process.',
+        technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+        url: 'https://govini2003.github.io/cv-builder/',
+    },
 ];
 
-export default Services_Data;
+export default projects;

@@ -1,77 +1,42 @@
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/logo.svg';
-import underline from '../../assets/nav_underline.svg';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-import menu_open from '../../assets/menu_open.svg';
-import menu_close from '../../assets/menu_close.svg';
+
+const navigation = [
+    { label: 'About', href: '#about' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+];
 
 const Navbar = () => {
-    const [menu, setMenu] = useState("home");
-    const menuRef = useRef();
-    
-    const openMenu = () => {
-        menuRef.current.style.right = "0";
-    }
-    
-    const closeMenu = () => {
-        menuRef.current.style.right = "-350px";
-    }
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className='navbar'>
-            <img src={logo} alt="logo" className="nav-logo" />
-            <div className='nav-mob-open' onClick={openMenu}>
-                <img src={menu_open} alt="menu" />
-            </div>
-
-            <ul ref={menuRef} className='nav-menu'>
-                <div className="nav-mob-close" onClick={closeMenu}>
-                    <img src={menu_close} alt="close" />
-                </div>
-                
-                <li onClick={() => setMenu("home")}>
-                    <AnchorLink className='anchor-link' offset={50} href='#home'>
-                        <p>Home</p>
-                        {menu === "home" ? <img src={underline} alt='' /> : <></>}
-                    </AnchorLink>
-                </li>
-                
-                <li onClick={() => setMenu("about")}>
-                    <AnchorLink className='anchor-link' offset={50} href='#about'>
-                        <p>About Me</p>
-                        {menu === "about" ? <img src={underline} alt='' /> : <></>}
-                    </AnchorLink>
-                </li>
-                
-                <li onClick={() => setMenu("services")}>
-                    <AnchorLink className='anchor-link' offset={50} href='#services'>
-                        <p>Projects</p>
-                        {menu === "services" ? <img src={underline} alt='' /> : <></>}
-                    </AnchorLink>
-                </li>
-                
-                <li onClick={() => setMenu("portfolio")}>
-                    <AnchorLink className='anchor-link' offset={50} href='#portfolio'>
-                        <p>Portfolio</p>
-                        {menu === "portfolio" ? <img src={underline} alt='' /> : <></>}
-                    </AnchorLink>
-                </li>
-                
-                <li onClick={() => setMenu("contact")}>
-                    <AnchorLink className='anchor-link' offset={50} href='#contact'>
-                        <p>Contact</p>
-                        {menu === "contact" ? <img src={underline} alt='' /> : <></>}
-                    </AnchorLink>
-                </li>
-            </ul>
-            
-            <div className='nav-connect'>
-                <AnchorLink className='anchor-link' offset={50} href='#contact'>
-                    Connect With Me
-                </AnchorLink>
-            </div>
-        </div>
+        <header className="navbar">
+            <a className="nav-brand" href="#home" aria-label="Govini Rajapakse home">
+                <span className="brand-mark">G</span>
+                <span>Govini Rajapakse</span>
+            </a>
+            <button
+                className={`nav-menu-toggle${menuOpen ? ' is-open' : ''}`}
+                type="button"
+                aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen(!menuOpen)}
+            >
+                <span />
+                <span />
+            </button>
+            <nav className={`nav-menu${menuOpen ? ' is-open' : ''}`} aria-label="Main navigation">
+                {navigation.map(({ label, href }) => (
+                    <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+                        {label}
+                    </a>
+                ))}
+                <a className="nav-contact-link" href="#contact" onClick={() => setMenuOpen(false)}>
+                    Let&apos;s talk <span aria-hidden="true">↗</span>
+                </a>
+            </nav>
+        </header>
     );
 };
 
