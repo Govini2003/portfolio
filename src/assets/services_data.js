@@ -22,7 +22,7 @@ const projects = [
         name: 'Cool Cal',
         description: 'A web app bringing everyday mathematical calculations and unit conversions together.',
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        url: 'https://govini2003.github.io/Calculator/coolcal.html',
+        url: 'https://govini2003.github.io/cool-cal/',
     },
     {
         number: '05',
