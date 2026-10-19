@@ -36,6 +36,7 @@ const projects = [
         description: 'A veterinary care platform built as a group project, with a Flutter app and Node.js backend.',
         technologies: ['Flutter', 'Node.js', 'MongoDB'],
         url: 'https://veta-app-marketing-site.vercel.app/',
+        repositoryUrl: 'https://github.com/Govini2003/veta-app',
     },
     {
         number: '07',

@@ -27,15 +27,29 @@ const Projects = () => (
                                 <span key={technology}>{technology}</span>
                             ))}
                         </div>
-                        {project.url && (
-                            <a
-                                className="project-link"
-                                href={project.url}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                View project <span aria-hidden="true">↗</span>
-                            </a>
+                        {(project.url || project.repositoryUrl) && (
+                            <div className="project-links">
+                                {project.url && (
+                                    <a
+                                        className="project-link"
+                                        href={project.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        View project <span aria-hidden="true">↗</span>
+                                    </a>
+                                )}
+                                {project.repositoryUrl && (
+                                    <a
+                                        className="project-link"
+                                        href={project.repositoryUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Mobile app repo <span aria-hidden="true">↗</span>
+                                    </a>
+                                )}
+                            </div>
                         )}
                     </article>
                 ))}
