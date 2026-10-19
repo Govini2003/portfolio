@@ -44,6 +44,13 @@ const projects = [
         technologies: ['React', 'TypeScript', 'Tailwind CSS'],
         url: 'https://govini2003.github.io/cv-builder/',
     },
+    {
+        number: '08',
+        name: 'Walawwa Villa Kathaluwa',
+        description: 'A website showcasing Walawwa Villa Kathaluwa and its accommodation.',
+        technologies: ['Website'],
+        url: 'https://govini2003.github.io/walawwa-villa-kathaluwa/',
+    },
 ];
 
 export default projects;
