@@ -36,6 +36,7 @@ const projects = [
         description: 'A veterinary care platform built as a group project, with a Flutter app and Node.js backend.',
         technologies: ['Flutter', 'Node.js', 'MongoDB'],
         url: 'https://veta-app-marketing-site.vercel.app/',
+        repositoryUrl: 'https://github.com/Govini2003/veta-app',
     },
     {
         number: '07',
@@ -43,6 +44,13 @@ const projects = [
         description: 'An ATS-friendly CV builder with PDF export to simplify the job application process.',
         technologies: ['React', 'TypeScript', 'Tailwind CSS'],
         url: 'https://govini2003.github.io/cv-builder/',
+    },
+    {
+        number: '08',
+        name: 'Walawwa Villa Kathaluwa',
+        description: 'A website showcasing Walawwa Villa Kathaluwa and its accommodation.',
+        technologies: ['Website'],
+        url: 'https://govini2003.github.io/walawwa-villa-kathaluwa/',
     },
 ];
 
